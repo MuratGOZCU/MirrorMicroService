@@ -16,7 +16,6 @@ namespace Mirror.Service.Catalog.Services.CategoryService
         public CategoryService(IMapper mapper, IDatabaseSettings dataBaseSettings)
         {
             _mapper = mapper;
-
             var client = new MongoClient(dataBaseSettings.ConnectionString);
             var database = client.GetDatabase(dataBaseSettings.DatabaseName);
             _categoryCollection = database.GetCollection<Category>(dataBaseSettings.CategoryCollectionName);
