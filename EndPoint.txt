@@ -1,0 +1,5 @@
+﻿SERVICES
+-CATALOG http://localhost:5054/
+-Photo
+-Order
+_Payment
