@@ -3,7 +3,6 @@ using Mirror.Service.Catalog.Congifration;
 using Mirror.Service.Catalog.Services.CategoryService;
 using Microsoft.OpenApi.Models;
 using Mirror.Service.Catalog.Services.ProductService;
-using Mirror.Service.Catalog.Services.ProductDetailService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +16,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
 builder.Services.AddControllers();
 
 

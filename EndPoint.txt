@@ -1,5 +1,6 @@
 ﻿SERVICES
--CATALOG http://localhost:5054/
--Photo
+-CATALOG http://localhost:5054
+-Photo   http://localhost:5174
+-Basket  http://localhost:5283
 -Order
 _Payment
