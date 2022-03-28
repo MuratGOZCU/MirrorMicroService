@@ -12,8 +12,7 @@ namespace Mirror.Service.Catalog.Model
         public string UserId { get; set; }
 
         public string CategoryId { get; set; }
-        public ProductDetailModel ProductDetail { get; set; }
-        public CategoryModel Category { get; set; }
+
     }
 }
 

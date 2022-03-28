@@ -17,6 +17,8 @@ namespace Mirror.Service.Catalog.Entity
 
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string CategoryId { get; set; }
+
+        [BsonIgnore]
         public ProductDetail ProductDetail { get; set; }
         [BsonIgnore]
         public Category Category { get; set; }

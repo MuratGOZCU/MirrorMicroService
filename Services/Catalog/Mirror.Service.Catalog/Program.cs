@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
 using Mirror.Service.Catalog.Congifration;
 using Mirror.Service.Catalog.Services.CategoryService;
+using Microsoft.OpenApi.Models;
+using Mirror.Service.Catalog.Services.ProductService;
+using Mirror.Service.Catalog.Services.ProductDetailService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +12,12 @@ var provider = builder.Services.BuildServiceProvider();
 var configuration = provider.GetRequiredService<IConfiguration>();
 
 
+builder.Services.AddSwaggerGen();
+
+
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
 builder.Services.AddControllers();
 
 
@@ -31,10 +39,12 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
+    
 }
 app.UseStaticFiles();
 
-
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapRazorPages();
 

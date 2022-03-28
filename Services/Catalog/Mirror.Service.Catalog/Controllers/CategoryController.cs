@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Mirror.Core.Model;
 using Microsoft.AspNetCore.Mvc;
 using Mirror.Service.Catalog.Model;
 using Mirror.Service.Catalog.Services.CategoryService;
@@ -23,43 +24,43 @@ namespace Mirror.Service.Catalog.Controllers
 
         // GET: api/values
         [HttpGet]
-        public async Task<List<CategoryModel>> Get()
+        public async Task<MirrorResponse<List<CategoryModel>>> Get()
         {
             var categories = await _categoryService.GetAllAsync();
 
-            return categories.Data;
+            return categories;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public async Task<CategoryModel> Get(string id)
+        public async Task<MirrorResponse<CategoryModel>> Get(string id)
         {
             var category = await _categoryService.GetByIdAsync(id);
-            return category.Data;
+            return category;
         }
 
         // POST api/values
         [HttpPost]
-        public async Task<CategoryModel> Post([FromBody]CategoryModel categoryModel)
+        public async Task<MirrorResponse<CategoryModel>> Post([FromBody]CategoryModel categoryModel)
         {
             var insert = await _categoryService.CreateAsync(categoryModel);
-            return insert.Data;
+            return insert;
         }
 
         // PUT api/values/5
         [HttpPut]
-        public async Task<CategoryModel> Put([FromBody] CategoryModel categoryModel)
+        public async Task<MirrorResponse<CategoryModel>> Put([FromBody] CategoryModel categoryModel)
         {
             var update = await _categoryService.CreateAsync(categoryModel);
-            return update.Data;
+            return update;
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public async Task<bool> Delete(string id)
+        public async Task<MirrorResponse<bool>> Delete(string id)
         {
             var delete = await _categoryService.DeleteAsync(id);
-            return delete.Data;
+            return delete;
         }
     }
 }
