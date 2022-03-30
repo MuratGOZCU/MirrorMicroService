@@ -8,8 +8,33 @@
 
   <ItemGroup>
     <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="StackExchange.Redis" />
+    <None Remove="Swashbuckle.AspNetCore.SwaggerGen" />
+    <None Remove="Swashbuckle.AspNetCore.Swagger" />
+    <None Remove="Model\" />
+    <None Remove="Entity\" />
+    <None Remove="Settings\" />
+    <None Remove="Services\" />
+    <None Remove="RedisManager\" />
+    <None Remove="Controller\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.5.43" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Services\" />
+    <Folder Include="Redis\" />
+    <Folder Include="Controller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core\Core\Mirror.Core.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

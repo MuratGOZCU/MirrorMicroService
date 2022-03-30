@@ -11,8 +11,8 @@
     "Mirror.Service.Basket": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
-      "applicationUrl": "http://localhost:5283",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5288",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
