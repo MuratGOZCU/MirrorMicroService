@@ -3,16 +3,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:27158",
+      "applicationUrl": "http://localhost:29867",
       "sslPort": 0
     }
   },
   "profiles": {
-    "Mirrror.Service.Storage": {
+    "Mirror.Service.Discount": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
-      "applicationUrl": "http://localhost:5174",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5019",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

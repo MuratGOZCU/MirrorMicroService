@@ -18,6 +18,11 @@ builder.Services.AddControllers();
 builder.Services.AddSingleton<IBasketService, BasketService>();
 builder.Services.Configure<RedisSetting>(configuration.GetSection("Redis"));
 
+builder.Services.AddSingleton<IRedisSetting>(conf =>
+{
+    return conf.GetRequiredService<IOptions<IRedisSetting>>().Value;
+});
+
 builder.Services.AddSingleton<RedisManager>(sp =>
 {
     var rdsSetting = sp.GetRequiredService<IOptions<RedisSetting>>().Value;
@@ -26,10 +31,7 @@ builder.Services.AddSingleton<RedisManager>(sp =>
     return redis;
 });
 
-builder.Services.AddSingleton<IRedisSetting>(conf =>
-{
-    return conf.GetRequiredService<IOptions<IRedisSetting>>().Value;
-});
+
 
 //builder.Services.Configure<DatabaseSettings>(configuration.GetSection("DatabaseSettings"));
 
