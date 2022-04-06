@@ -32,6 +32,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Storage", "Storage", "{B7A4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirrror.Service.Storage", "Services\Storage\Mirrror.Service.Storage\Mirrror.Service.Storage.csproj", "{FE1EEA74-6D8B-484A-8B4D-C6CAE86D1077}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Service.Order.Api", "Services\Order\Mirror.Service.Order.Api\Mirror.Service.Order.Api.csproj", "{84303DB9-348C-4428-AF5E-08AC2597C437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Service.Order.Core", "Services\Order\Mirror.Service.Order.Core\Mirror.Service.Order.Core.csproj", "{CD1EB8AA-DD72-46B6-A097-9E4E62F304ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Service.Order.Data", "Services\Order\Mirror.Service.Order.Data\Mirror.Service.Order.Data.csproj", "{1A155B02-B394-42F5-8307-AB21A6F19A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirror.Service.Order.Manager", "Services\Order\Mirror.Service.Order.Manager\Mirror.Service.Order.Manager.csproj", "{07E2DBF0-26ED-42A0-8673-F36FB8DDCE72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +66,22 @@ Global
 		{FE1EEA74-6D8B-484A-8B4D-C6CAE86D1077}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE1EEA74-6D8B-484A-8B4D-C6CAE86D1077}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE1EEA74-6D8B-484A-8B4D-C6CAE86D1077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84303DB9-348C-4428-AF5E-08AC2597C437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84303DB9-348C-4428-AF5E-08AC2597C437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84303DB9-348C-4428-AF5E-08AC2597C437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84303DB9-348C-4428-AF5E-08AC2597C437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1EB8AA-DD72-46B6-A097-9E4E62F304ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1EB8AA-DD72-46B6-A097-9E4E62F304ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1EB8AA-DD72-46B6-A097-9E4E62F304ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1EB8AA-DD72-46B6-A097-9E4E62F304ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A155B02-B394-42F5-8307-AB21A6F19A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A155B02-B394-42F5-8307-AB21A6F19A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A155B02-B394-42F5-8307-AB21A6F19A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A155B02-B394-42F5-8307-AB21A6F19A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E2DBF0-26ED-42A0-8673-F36FB8DDCE72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E2DBF0-26ED-42A0-8673-F36FB8DDCE72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E2DBF0-26ED-42A0-8673-F36FB8DDCE72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E2DBF0-26ED-42A0-8673-F36FB8DDCE72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,5 +100,9 @@ Global
 		{52E26FA6-C791-427F-96B2-5E986DE28771} = {2FBE99D1-4F18-4218-9A28-2571364CE518}
 		{B7A403BF-5EB0-4D03-9763-90D224B06D13} = {3F05A8F6-1AC5-400D-807D-15F8A0FA82AD}
 		{FE1EEA74-6D8B-484A-8B4D-C6CAE86D1077} = {B7A403BF-5EB0-4D03-9763-90D224B06D13}
+		{84303DB9-348C-4428-AF5E-08AC2597C437} = {179FF95B-F0B9-4E21-951B-392D87D738AE}
+		{CD1EB8AA-DD72-46B6-A097-9E4E62F304ED} = {179FF95B-F0B9-4E21-951B-392D87D738AE}
+		{1A155B02-B394-42F5-8307-AB21A6F19A9F} = {179FF95B-F0B9-4E21-951B-392D87D738AE}
+		{07E2DBF0-26ED-42A0-8673-F36FB8DDCE72} = {179FF95B-F0B9-4E21-951B-392D87D738AE}
 	EndGlobalSection
 EndGlobal

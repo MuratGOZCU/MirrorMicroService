@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MediatR\" />
+    <None Remove="MediatR\Command\" />
+    <None Remove="MediatR\Query\" />
+    <None Remove="Instrafactor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Instrafactor\" />
+    <Folder Include="Instrafactor\" />
+  </ItemGroup>
+</Project>
