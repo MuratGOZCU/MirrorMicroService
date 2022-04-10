@@ -11,9 +11,15 @@
     <None Remove="MediatR\Command\" />
     <None Remove="MediatR\Query\" />
     <None Remove="Instrafactor\" />
+    <None Remove="Service\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Instrafactor\" />
     <Folder Include="Instrafactor\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mirror.Service.Order.Core\Mirror.Service.Order.Core.csproj" />
+    <ProjectReference Include="..\Mirror.Service.Order.Data\Mirror.Service.Order.Data.csproj" />
   </ItemGroup>
 </Project>

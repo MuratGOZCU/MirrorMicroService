@@ -4,9 +4,9 @@ using Mirror.Service.Order.Core;
 
 namespace Mirror.Service.Order.Data.Context
 {
-	public class MirrowDbContext : DbContext
+	public class MirrorDbContext : DbContext
 	{
-		public MirrowDbContext(DbContextOptions<MirrowDbContext> options) : base(options)
+		public MirrorDbContext(DbContextOptions<MirrorDbContext> options) : base(options)
 		{
 		}
 
