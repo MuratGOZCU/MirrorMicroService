@@ -12,6 +12,8 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.1" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,13 +23,20 @@
     <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL.Design" />
     <None Remove="Mapper\" />
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="MassTransit.RabbitMQ" />
+    <None Remove="MassTransit.AspNetCore" />
+    <None Remove="Consumers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Mapper\" />
+    <Folder Include="Consumers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mirror.Service.Order.Manager\Mirror.Service.Order.Manager.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Core\Mirror.Core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

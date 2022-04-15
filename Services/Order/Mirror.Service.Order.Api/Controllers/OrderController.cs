@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Mirror.Core.Messages;
 using Mirror.Service.Order.Core.Model;
 using Mirror.Service.Order.Manager.Instrafactor;
 
@@ -18,12 +20,14 @@ namespace Mirror.Service.Order.Api.Controllers
     public class OrderController : Controller
     {
 
+        private readonly ISendEndpointProvider _sendEndpointProvider;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public OrderController(IUnitOfWork unitOfWork, IMapper mapper)
+        public OrderController(IUnitOfWork unitOfWork, IMapper mapper, ISendEndpointProvider sendEndpointProvider)
         {
             _mapper = mapper;
             _unitOfWork = unitOfWork;
+            _sendEndpointProvider = sendEndpointProvider;
         }
 
         // GET: api/values
@@ -45,8 +49,17 @@ namespace Mirror.Service.Order.Api.Controllers
         public async Task<OrderModel> Post([FromBody] OrderModel order)
         {
             _unitOfWork.OrderService.Create(_mapper.Map<Core.Entity.Order>(order));
-            
             await _unitOfWork.CompleteAsync();
+
+           
+            var sendEndpoint = await _sendEndpointProvider.GetSendEndpoint(new Uri("queue:create-order-service"));
+            var createQueueCommand = new OrderModel();
+            createQueueCommand.BuyerId = order.BuyerId;
+            createQueueCommand.Id = order.Id;
+            await sendEndpoint.Send<CreateOrderCommandMessage>(createQueueCommand);
+            
+
+
 
             return order;
         }
