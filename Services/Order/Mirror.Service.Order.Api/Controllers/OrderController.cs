@@ -58,9 +58,6 @@ namespace Mirror.Service.Order.Api.Controllers
             createQueueCommand.Id = order.Id;
             await sendEndpoint.Send<CreateOrderCommandMessage>(createQueueCommand);
             
-
-
-
             return order;
         }
 
